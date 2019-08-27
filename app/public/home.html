@@ -17,7 +17,7 @@
     <!-- Ajax -->
     <script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js'></script>
     <style>
-        .container{
+        .container {
             text-align: center;
         }
     </style>
@@ -27,15 +27,21 @@
     <div class='container'>
         <div class='row'>
             <div class='col'>
-                <a href="http://localhost:3000/survey" id="start">Take Survey</button>
+                <button class="btn btn-success" id="start">Take Survey</button>
             </div>
         </div>
     </div>
 </body>
 
 <script type='text/javascript'>
-    $("#start").on("click", function(){
-        
+    $("#start").on("click", function () {
+        var queryURL = "http://localhost:3000/survey";
+        $.ajax({
+            url: queryURL,
+            method: 'GET'
+        }).then(function (response) {
+            console.log(data);
+        });
     });
 </script>
 
