@@ -29,7 +29,7 @@
     <div class='container'>
         <div class='row'>
             <div class='col'>
-                <button class="btn btn-success" id="home">Home</a>
+                <a href="/" class="btn btn-success" id="start" role="button">Home</a>
             </div>
         </div>
         <div class="row">
@@ -39,15 +39,36 @@
         </div>
         <div class="row">
             <form>
-                <select id="q1" onchange="q1()">
+                <select id="q1">
+                    <!--  onchange="q1()" -->
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
                     <option>5</option>
                 </select>
+
             </form>
         </div>
+        <div class="row">
+                <div>
+                    Question 2
+                </div>
+            </div>
+        <div class="row">
+            <form>
+                <select id="q2">
+                    <!--  onchange="q1()" -->
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+
+            </form>
+        </div>
+
         <div class="row">
             <button class="btn btn-primary" id="submit">Submit</button>
         </div>
@@ -59,13 +80,20 @@
 
     });
 
-    function q1(){
-        var myList = $("#q1")
+    $("#submit").on("click", function () {
+        console.log(q1());
+        console.log(q2());
+    });
+
+    function q1() {
+        var myList = $("#q1").val();
+        return myList;
     }
 
-    $("#submit").on("click", function () {
-        
-    });
+    function q2() {
+        var myList = $("#q2").val();
+        return myList;
+    }
 </script>
 
 </html>

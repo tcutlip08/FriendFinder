@@ -27,22 +27,22 @@
     <div class='container'>
         <div class='row'>
             <div class='col'>
-                <button class="btn btn-success" id="start">Take Survey</button>
+                <a href="/survey" class="btn btn-success" id="start" role="button">Take Survey</a>
             </div>
         </div>
     </div>
 </body>
 
 <script type='text/javascript'>
-    $("#start").on("click", function () {
-        var queryURL = "http://localhost:3000/survey";
-        $.ajax({
-            url: queryURL,
-            method: 'GET'
-        }).then(function (response) {
-            console.log(data);
-        });
-    });
+    // $("#start").on("click", function () {
+    //     var queryURL = "http://localhost:3000/survey";
+    //     $.ajax({
+    //         url: queryURL,
+    //         method: 'GET'
+    //     }).then(function (response) {
+    //         console.log(data);
+    //     });
+    // });
 </script>
 
 </html>
